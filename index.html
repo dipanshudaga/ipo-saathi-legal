@@ -4,90 +4,52 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Privacy Policy — IPO Saathi</title>
-<style>
-  :root {
-    --brand: #23734F;
-    --ink: #17302B;
-    --muted: #52635E;
-    --bg: #F8FAF9;
-    --card: #FFFFFF;
-    --border: #E6ECE8;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-  }
-  main {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 48px 20px 80px;
-  }
-  h1 {
-    font-size: 28px;
-    margin: 0 0 4px;
-  }
-  .updated {
-    color: var(--muted);
-    font-size: 14px;
-    margin: 0 0 32px;
-  }
-  h2 {
-    font-size: 18px;
-    margin: 32px 0 12px;
-    color: var(--brand);
-  }
-  p, li {
-    font-size: 16px;
-    color: var(--ink);
-  }
-  ul {
-    padding-left: 20px;
-  }
-  a { color: var(--brand); }
-  .intro {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 8px;
-  }
-</style>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <main>
+  <nav>
+    <a href="./" class="active">Privacy Policy</a>
+    <a href="terms-of-service/">Terms of Service</a>
+  </nav>
+
   <h1>Privacy Policy</h1>
   <p class="updated">IPO Saathi — last updated 29 September 2026</p>
 
-  <p class="intro">IPO Saathi helps you track Indian IPOs — issue dates, grey market premium, subscription figures — and check your own allotment status. This is a plain description of what the app actually does with your data.</p>
+  <p class="intro">IPO Saathi helps you track Indian IPOs — issue dates, grey market premium, subscription figures — and check your own allotment status. This policy describes, in plain language, what data the app collects, why, and what happens to it. It applies to anyone using the IPO Saathi mobile application.</p>
 
-  <h2>What we collect</h2>
-  <ul>
-    <li><strong>PAN numbers you add</strong>, to check allotment status. Stored only on your device, in its secure Keychain/Keystore storage — never uploaded to our servers. When you check allotment, your PAN is sent directly to the registrar handling that IPO (KFin, MUFG Intime, Bigshare, or Maashitla, depending on the issue) — the same lookup you'd do on that registrar's own website.</li>
-    <li><strong>Notification preferences</strong> (which reminders you want), stored locally on your device.</li>
-    <li>Nothing else. No accounts exist yet, so we don't collect a name, email, or phone number through the app today.</li>
-  </ul>
+  <h2>Information we collect</h2>
+  <p><strong>Personal information.</strong> The only personal information IPO Saathi collects is the PAN (Permanent Account Number) you voluntarily add to check an allotment. It is stored only on your device, in its secure Keychain (iOS) / Keystore (Android) storage — never uploaded to or stored on our servers.</p>
+  <p><strong>Non-personal information.</strong> None. The app does not use analytics, ad tracking, cookies, or crash-reporting SDKs of any kind. We do not know how you use the app, how often you open it, or what device you're on.</p>
+  <p>No accounts exist in the app today, so we do not collect a name, email address, or phone number through it.</p>
 
-  <h2>What we don't do</h2>
-  <ul>
-    <li>No analytics, no ad tracking, no crash-reporting SDKs — the app doesn't phone home about how you use it.</li>
-    <li>We never sell or share your data. We don't have it to sell — PANs stay on your device.</li>
-  </ul>
+  <h2>How we use your information</h2>
+  <p>Your PAN is used for exactly one purpose: when you tap "Check allotment," it is sent directly to the registrar handling that specific IPO (KFin Technologies, MUFG Intime, Bigshare Services, or Maashitla Securities, depending on the issue) — the same lookup you would perform on that registrar's own website. We do not store the fact that you checked, beyond the result cached on your own device.</p>
+  <p>Notification preferences (which reminders you'd like) are stored locally on your device and used only to decide which reminders to show you.</p>
+
+  <h2>Sharing of information</h2>
+  <p>We do not sell, rent, or share your information with anyone, for any reason. The only party your PAN is ever sent to is the specific registrar you ask to check — never to us, never to any other third party, and never for advertising or marketing purposes.</p>
+
+  <h2>Data storage and security</h2>
+  <p>Your PAN is stored using <code>expo-secure-store</code>, which relies on the operating system's own secure storage (Keychain on iOS, Keystore on Android) — the same mechanism used for passwords and other sensitive on-device data. Communication with registrars when checking allotment happens over HTTPS.</p>
+  <p>No system can be guaranteed 100% secure, and this app carries no server-side account or password to be compromised in the first place — there is no central database of user PANs for anyone to breach.</p>
+
+  <h2>Your control over your data</h2>
+  <p>You can remove a saved PAN at any time from the app's PANs tab. Uninstalling the app deletes everything associated with it, since nothing is stored anywhere but your own device.</p>
 
   <h2>IPO market data</h2>
-  <p>Issue dates, price bands, subscription and grey-market figures come from NSE, BSE, SEBI, and IPO Guru's public feeds. This is public market data, not personal information about you.</p>
+  <p>Issue dates, price bands, subscription figures, and grey market premium shown in the app come from NSE, BSE, SEBI, and IPO Guru's public feeds. This is public market data about companies and their IPOs — not personal information about you.</p>
 
-  <h2>Your control</h2>
-  <p>You can remove a saved PAN at any time from the PANs tab. Uninstalling the app deletes everything, since nothing is stored anywhere but your device.</p>
+  <h2>Children's privacy</h2>
+  <p>IPO Saathi is not directed at, and is not intended for use by, children. We do not knowingly collect information from anyone under 18. Since the app collects no data beyond the PAN a user chooses to enter, and PAN cards in India are only issued to individuals who can lawfully hold one, we do not expect this to arise in practice — but if it ever comes to our attention, the relevant local data will be removed on the affected device on request.</p>
 
-  <h2>Changes</h2>
-  <p>If we add accounts (phone-number sign-in) or any new data collection, this policy will be updated first, and that section will say plainly what's collected and why.</p>
+  <h2>Changes to this policy</h2>
+  <p>This policy may be updated as the app changes — for example, if account sign-in is introduced in the future, that section will say plainly what's newly collected and why. The current version is always the one at this page; the date above reflects the last update.</p>
 
   <h2>Contact</h2>
-  <p>Questions about this policy: <a href="mailto:dipanshudaga24@gmail.com">dipanshudaga24@gmail.com</a></p>
+  <p>Questions about this policy: <a href="mailto:dipanshu@thefablelabs.com">dipanshu@thefablelabs.com</a></p>
+
+  <footer>IPO Saathi · <a href="terms-of-service/">Terms of Service</a></footer>
 </main>
 </body>
 </html>
