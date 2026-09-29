@@ -1,73 +1,152 @@
+/* Tokens copied from app/src/theme/tokens.ts — kept in sync by hand, this
+   page has no build step to import the real file from. */
 :root {
-  --brand: #23734F;
-  --ink: #17302B;
-  --muted: #52635E;
-  --bg: #F8FAF9;
-  --card: #FFFFFF;
-  --border: #E6ECE8;
+  --brand-900: #123B2D;
+  --brand-700: #23734F;
+  --brand-100: #E6F3EC;
+  --brand-50: #F2F9F5;
+  --neutral-950: #17302B;
+  --neutral-800: #344642;
+  --neutral-700: #52635E;
+  --neutral-600: #70807B;
+  --neutral-500: #8A9893;
+  --neutral-300: #D6DEDA;
+  --neutral-200: #E6ECE8;
+  --neutral-100: #F2F5F3;
+  --neutral-50: #F8FAF9;
+  --white: #FFFFFF;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
 }
+
 * { box-sizing: border-box; }
+
 body {
   margin: 0;
-  background: var(--bg);
-  color: var(--ink);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--neutral-50);
+  color: var(--neutral-950);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
+
 main {
   max-width: 680px;
   margin: 0 auto;
-  padding: 48px 20px 80px;
+  padding: var(--space-8) var(--space-5) 80px;
 }
+
+/* Brand lockup — same icon the app itself ships, so this page reads as
+   IPO Saathi's own, not a generic legal template. */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+.brand img {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+}
+.brand span {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--neutral-950);
+}
+
 nav {
   display: flex;
-  gap: 20px;
-  font-size: 14px;
-  margin-bottom: 24px;
+  gap: var(--space-5);
+  font-size: 13px;
+  margin-bottom: var(--space-6);
+  border-bottom: 1px solid var(--neutral-200);
+  padding-bottom: var(--space-4);
 }
 nav a {
-  color: var(--muted);
+  color: var(--neutral-600);
   text-decoration: none;
-  border-bottom: 1px solid transparent;
+  font-weight: 500;
+  padding-bottom: 2px;
 }
 nav a.active {
-  color: var(--brand);
+  color: var(--brand-700);
   font-weight: 600;
-  border-bottom-color: var(--brand);
+  border-bottom: 2px solid var(--brand-700);
 }
+
+/* Matches app/src/theme/tokens.ts typography.h1 (24/30, Inter 600) */
 h1 {
-  font-size: 28px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 600;
   margin: 0 0 4px;
+  letter-spacing: -0.2px;
 }
+
+/* typography.caption */
 .updated {
-  color: var(--muted);
-  font-size: 14px;
-  margin: 0 0 32px;
+  color: var(--neutral-500);
+  font-size: 11px;
+  font-weight: 500;
+  margin: 0 0 var(--space-6);
 }
+
+/* typography.label, uppercase — same group-label treatment used in the
+   app's own FilterSortSheet component */
 h2 {
-  font-size: 18px;
-  margin: 32px 0 12px;
-  color: var(--brand);
+  font-size: 11px;
+  line-height: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--brand-700);
+  margin: var(--space-6) 0 var(--space-3);
 }
+
+/* typography.bodyLg — same size the app uses for the IPO description
+   paragraph on the detail screen */
 p, li {
-  font-size: 16px;
-  color: var(--ink);
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--neutral-800);
+  margin: 0 0 var(--space-4);
 }
-ul {
-  padding-left: 20px;
+
+ul { padding-left: 20px; margin: 0 0 var(--space-4); }
+li { margin-bottom: var(--space-2); }
+
+a { color: var(--brand-700); }
+
+code {
+  background: var(--neutral-100);
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-size: 14px;
 }
-a { color: var(--brand); }
+
+/* Same card surface as the app: white, neutral-200 border, radius.lg,
+   a soft brand-tinted shadow (shadow.card in tokens.ts). */
 .intro {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 8px;
+  background: var(--white);
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  margin: 0 0 var(--space-2);
+  box-shadow: 0 4px 18px rgba(18, 59, 45, 0.06);
 }
+
 footer {
-  margin-top: 48px;
-  padding-top: 20px;
-  border-top: 1px solid var(--border);
-  font-size: 13px;
-  color: var(--muted);
+  margin-top: var(--space-8);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--neutral-200);
+  font-size: 12px;
+  color: var(--neutral-500);
 }
+footer a { color: var(--neutral-600); }
